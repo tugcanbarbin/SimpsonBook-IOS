@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O5Y-9o-lJs">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpsinBookCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Wvw-FY-iXk">
+                                <rect key="frame" x="30" y="123" width="333" height="679"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1iG-1R-E5l">
+                                    <size key="itemSize" width="100" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dataCell" id="PDV-HN-dwe" customClass="CustomCell" customModule="SimpsinBookCollectionView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0fE-Cc-uNe">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kyQ-65-g0B">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="2Pl-s1-6qc"/>
+                                                        <constraint firstAttribute="height" constant="150" id="Leq-aF-Qdi"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kyQ-65-g0B" firstAttribute="top" secondItem="0fE-Cc-uNe" secondAttribute="top" id="5pk-aI-Wtz"/>
+                                                <constraint firstItem="kyQ-65-g0B" firstAttribute="top" secondItem="0fE-Cc-uNe" secondAttribute="top" id="7ol-xo-riB"/>
+                                                <constraint firstItem="kyQ-65-g0B" firstAttribute="leading" secondItem="0fE-Cc-uNe" secondAttribute="leading" id="9GN-UA-Jsc"/>
+                                                <constraint firstAttribute="trailing" secondItem="kyQ-65-g0B" secondAttribute="trailing" id="ABC-IN-iRD"/>
+                                                <constraint firstItem="kyQ-65-g0B" firstAttribute="leading" secondItem="0fE-Cc-uNe" secondAttribute="leading" id="Jyn-vP-P4Y"/>
+                                                <constraint firstAttribute="bottom" secondItem="kyQ-65-g0B" secondAttribute="bottom" id="UKH-li-QmN"/>
+                                                <constraint firstAttribute="bottom" secondItem="kyQ-65-g0B" secondAttribute="bottom" id="gve-vB-ZK7"/>
+                                                <constraint firstAttribute="trailing" secondItem="kyQ-65-g0B" secondAttribute="trailing" id="yqP-Kr-M8n"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" red="0.7803921568627451" green="0.5490196078431373" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="simpsonImageView" destination="kyQ-65-g0B" id="kMn-cf-jSk"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wvw-FY-iXk" secondAttribute="trailing" constant="30" id="1O0-jD-2yc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Wvw-FY-iXk" secondAttribute="bottom" constant="16" id="2T5-Ua-h7I"/>
+                            <constraint firstItem="Wvw-FY-iXk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="DtW-M8-dEg"/>
+                            <constraint firstItem="Wvw-FY-iXk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Wyr-NW-EkN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rul-YN-sid"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Wvw-FY-iXk" id="tpj-5c-3JQ"/>
+                        <segue destination="Y5P-9P-fbv" kind="show" identifier="VCtoDetailsVC" id="7U6-j2-NEQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028.2442748091603" y="3.5211267605633805"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="zRn-O1-MGf">
+            <objects>
+                <viewController storyboardIdentifier="DetailsVC" id="Y5P-9P-fbv" customClass="DetailsViewController" customModule="SimpsinBookCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AWp-4A-LsS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o2w-6t-Aef">
+                                <rect key="frame" x="76" y="103" width="240" height="280"/>
+                                <color key="backgroundColor" red="0.7803921568627451" green="0.5490196078431373" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="8pC-g4-5eu"/>
+                                    <constraint firstAttribute="height" constant="280" id="RUU-2J-tnP"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="cOG-pV-hmq">
+                                <rect key="frame" x="0.0" y="444" width="393" height="93.666666666666629"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDS-zf-lOg">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lah-7s-dqb">
+                                        <rect key="frame" x="0.0" y="73.333333333333371" width="393" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E1Z-lR-DGa"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="o2w-6t-Aef" firstAttribute="leading" secondItem="E1Z-lR-DGa" secondAttribute="leading" constant="76" id="DGN-uP-9aC"/>
+                            <constraint firstItem="E1Z-lR-DGa" firstAttribute="trailing" secondItem="cOG-pV-hmq" secondAttribute="trailing" id="iss-ED-Gdz"/>
+                            <constraint firstItem="cOG-pV-hmq" firstAttribute="leading" secondItem="E1Z-lR-DGa" secondAttribute="leading" id="jfR-mB-u4t"/>
+                            <constraint firstItem="cOG-pV-hmq" firstAttribute="top" secondItem="o2w-6t-Aef" secondAttribute="bottom" constant="61" id="mbw-PP-amA"/>
+                            <constraint firstItem="E1Z-lR-DGa" firstAttribute="trailing" secondItem="o2w-6t-Aef" secondAttribute="trailing" constant="77" id="xbG-mQ-VCE"/>
+                            <constraint firstItem="o2w-6t-Aef" firstAttribute="top" secondItem="E1Z-lR-DGa" secondAttribute="top" id="zSP-Jg-jsW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="d6z-XY-Ulr"/>
+                    <connections>
+                        <outlet property="imageView" destination="o2w-6t-Aef" id="gxR-g7-tfl"/>
+                        <outlet property="jobLabel" destination="Lah-7s-dqb" id="u3j-ft-OhT"/>
+                        <outlet property="nameLabel" destination="GDS-zf-lOg" id="4JB-bT-ZTP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zNv-bq-8qw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1835.8778625954199" y="3.5211267605633805"/>
+        </scene>
+        <!--Simpson Book-->
+        <scene sceneID="hDW-Mh-AIo">
+            <objects>
+                <navigationController title="Simpson Book" automaticallyAdjustsScrollViewInsets="NO" id="O5Y-9o-lJs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rgn-P0-Srq">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w8J-c5-hfZ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zLb-S9-54s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VXT-vn-mu7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
